@@ -1,0 +1,10 @@
+{
+	"name": "AzureKeyVault_3",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kv-almacenamiento2.vault.azure.net/"
+		}
+	}
+}
