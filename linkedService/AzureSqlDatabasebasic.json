@@ -1,0 +1,22 @@
+{
+	"name": "AzureSqlDatabasebasic",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault_3",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "Databaseconectiondatabasebasic",
+				"secretVersion": "59a1bdd9f43542e2b7d9a6cc36ba5383"
+			}
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
