@@ -116,10 +116,6 @@
 									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference",
 									"parameters": {
-										"URL_Key_Vault": {
-											"value": "https://kv-almacenamiento2.vault.azure.net/",
-											"type": "Expression"
-										},
 										"schema": {
 											"value": "@item().schema",
 											"type": "Expression"
@@ -155,7 +151,7 @@
 		"parameters": {
 			"schema": {
 				"type": "string",
-				"defaultValue": "Finance"
+				"defaultValue": "finance"
 			},
 			"schema2": {
 				"type": "string",
