@@ -3,7 +3,17 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase3",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"urlKeyVault": {
+					"value": "@dataset().urlKeyVault",
+					"type": "Expression"
+				},
+				"secretNameKeyVault": {
+					"value": "@dataset().secretNameKeyVault",
+					"type": "Expression"
+				}
+			}
 		},
 		"parameters": {
 			"schema": {
