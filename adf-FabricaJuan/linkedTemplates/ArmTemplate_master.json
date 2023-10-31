@@ -1,0 +1,77 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adf-FabricaJuan"
+		},
+		"AzureKeyVault_3_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://kv-almacenamiento2.vault.azure.net/"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "DatabaseConectiondatabase3"
+		},
+		"AzureSqlDatabasebasic_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "Databaseconectiondatabasebasic"
+		},
+		"trigger1Juan_properties_pipeline1_parameters_schema": {
+			"type": "string",
+			"defaultValue": "finance"
+		},
+		"trigger1Juan_properties_pipeline1_parameters_schema2": {
+			"type": "string",
+			"defaultValue": "dbo"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adf-FabricaJuan_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureKeyVault_3_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault_3_properties_typeProperties_baseUrl')]"
+					},
+					"AzureSqlDatabase3_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('AzureSqlDatabase3_properties_typeProperties_connectionString_secretName')]"
+					},
+					"AzureSqlDatabasebasic_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('AzureSqlDatabasebasic_properties_typeProperties_connectionString_secretName')]"
+					},
+					"trigger1Juan_properties_pipeline1_parameters_schema": {
+						"value": "[parameters('trigger1Juan_properties_pipeline1_parameters_schema')]"
+					},
+					"trigger1Juan_properties_pipeline1_parameters_schema2": {
+						"value": "[parameters('trigger1Juan_properties_pipeline1_parameters_schema2')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

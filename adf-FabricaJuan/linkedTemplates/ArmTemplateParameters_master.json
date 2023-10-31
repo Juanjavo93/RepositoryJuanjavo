@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-FabricaJuan"
+		},
+		"AzureKeyVault_3_properties_typeProperties_baseUrl": {
+			"value": "https://kv-almacenamiento2.vault.azure.net/"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_connectionString_secretName": {
+			"value": "DatabaseConectiondatabase3"
+		},
+		"AzureSqlDatabasebasic_properties_typeProperties_connectionString_secretName": {
+			"value": "Databaseconectiondatabasebasic"
+		},
+		"trigger1Juan_properties_pipeline1_parameters_schema": {
+			"value": "finance"
+		},
+		"trigger1Juan_properties_pipeline1_parameters_schema2": {
+			"value": "dbo"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
