@@ -41,6 +41,8 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
+							"modifiedDatetimeStart": "2023-10-30T07:01:00.000Z",
+							"modifiedDatetimeEnd": "2023-10-31T07:02:00.000Z",
 							"enablePartitionDiscovery": false
 						}
 					},
@@ -68,7 +70,19 @@
 				"outputs": [
 					{
 						"referenceName": "Genericdataset",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"schema": "prb",
+							"table": "tabla_contenedor",
+							"urlKeyVault": {
+								"value": "https://kv-almacenamiento2.vault.azure.net/",
+								"type": "Expression"
+							},
+							"secretNameKeyVault": {
+								"value": "DatabaseConectiondatabase3",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
