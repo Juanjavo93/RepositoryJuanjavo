@@ -5,6 +5,20 @@
 			"referenceName": "AzureSqlDatabase3",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"schema": {
+				"type": "string"
+			},
+			"table": {
+				"type": "string"
+			},
+			"urlKeyVault": {
+				"type": "string"
+			},
+			"secretNameKeyVault": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": []
