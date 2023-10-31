@@ -27,6 +27,14 @@
 			"type": "string",
 			"defaultValue": "dbo"
 		},
+		"trigger1JuanJavo_properties_pipeline11_parameters_schema": {
+			"type": "string",
+			"defaultValue": "finance"
+		},
+		"trigger1JuanJavo_properties_pipeline11_parameters_schema2": {
+			"type": "string",
+			"defaultValue": "dbo"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -68,6 +76,12 @@
 					},
 					"trigger1Juan_properties_pipeline1_parameters_schema2": {
 						"value": "[parameters('trigger1Juan_properties_pipeline1_parameters_schema2')]"
+					},
+					"trigger1JuanJavo_properties_pipeline11_parameters_schema": {
+						"value": "[parameters('trigger1JuanJavo_properties_pipeline11_parameters_schema')]"
+					},
+					"trigger1JuanJavo_properties_pipeline11_parameters_schema2": {
+						"value": "[parameters('trigger1JuanJavo_properties_pipeline11_parameters_schema2')]"
 					}
 				}
 			},

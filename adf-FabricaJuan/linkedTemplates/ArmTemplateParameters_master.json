@@ -20,6 +20,12 @@
 		"trigger1Juan_properties_pipeline1_parameters_schema2": {
 			"value": "dbo"
 		},
+		"trigger1JuanJavo_properties_pipeline11_parameters_schema": {
+			"value": "finance"
+		},
+		"trigger1JuanJavo_properties_pipeline11_parameters_schema2": {
+			"value": "dbo"
+		},
 		"containerUri": {
 			"value": ""
 		},
