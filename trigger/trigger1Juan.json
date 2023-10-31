@@ -1,0 +1,29 @@
+{
+	"name": "trigger1Juan",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"schema": "finance",
+					"schema2": "dbo"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 10,
+				"startTime": "2023-10-30T21:30:00",
+				"endTime": "2023-10-30T22:00:00",
+				"timeZone": "SA Pacific Standard Time"
+			}
+		}
+	}
+}
