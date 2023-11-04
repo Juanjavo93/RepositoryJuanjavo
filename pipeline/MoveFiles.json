@@ -222,7 +222,7 @@
 			},
 			"DestinationStore_Location": {
 				"type": "string",
-				"defaultValue": "ejercicio4"
+				"defaultValue": "ejercicio3"
 			},
 			"DestinationStore_Directory": {
 				"type": "string"
