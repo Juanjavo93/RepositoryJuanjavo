@@ -1,0 +1,30 @@
+{
+	"name": "Move_File_Pipeline",
+	"author": "juanjavo93@hotmail.com",
+	"annotations": [],
+	"services": [
+		"Azure Blob Storage",
+		"Azure Data Explorer",
+		"Azure Data Lake Storage",
+		"Azure Databricks",
+		"Azure SQL Database",
+		"Azure Storage",
+		"AzureSqlServer",
+		"Azure Synapse Analytics",
+		"Dataverse",
+		"SQL Server",
+		"SAP Table",
+		"SQL Azure"
+	],
+	"categories": [
+		"Azure Pipeline",
+		"Analytics",
+		"Compliance",
+		"Copy",
+		"Data flow",
+		"Data Movement",
+		"Data Masking",
+		"Synapse",
+		"Transform"
+	]
+}
