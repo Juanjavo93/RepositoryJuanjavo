@@ -34,8 +34,65 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"enableStaging": false
-							}
+								"source": {
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
+								},
+								"sink": {
+									"type": "AzureSqlSink",
+									"writeBehavior": "upsert",
+									"upsertSettings": {
+										"useTempDB": true,
+										"keys": [
+											"COUNTRYREGION"
+										]
+									},
+									"sqlWriterUseTableLock": false,
+									"disableMetricsCollection": false
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "AzureSqlTable1",
+									"type": "DatasetReference",
+									"parameters": {
+										"schema": {
+											"value": "@item().schema",
+											"type": "Expression"
+										},
+										"tabla": {
+											"value": "@item().tabla",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "AzureSqlTable2",
+									"type": "DatasetReference",
+									"parameters": {
+										"schema2": {
+											"value": "@item().schema2",
+											"type": "Expression"
+										},
+										"tabla": {
+											"value": "@item().tabla",
+											"type": "Expression"
+										}
+									}
+								}
+							]
 						}
 					]
 				}
@@ -52,7 +109,7 @@
 				"typeProperties": {
 					"variableName": "tabla",
 					"value": {
-						"value": "@json('[\n\n{\n      \"schema\": \"finance\",    \n        \"schema2\": \"dbo\",     \n        \"tabla\":\"LogisticsAddressCountryRegionStaging\" ,   \n        \"pk_integracion\": \"COUNTRYREGION\"\n        },\n   ] ') ",
+						"value": "@json('[\n\n{\n      \"schema\": \"dbo\",    \n        \"schema2\": \"dbt\",     \n        \"tabla\":\"LogisticsAddressCountryRegionStaging\" ,   \n        \"pk_integracion\": \"COUNTRYREGION\"\n        },\n   ] ') ",
 						"type": "Expression"
 					}
 				}
