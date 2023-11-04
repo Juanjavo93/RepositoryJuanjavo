@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "LogisticsAddressCountryRegionStaging",
+				"name": "LogisticsAddressCountryRegionStaging1",
 				"type": "ExecutePipeline",
 				"dependsOn": [],
 				"userProperties": [],
@@ -16,11 +16,11 @@
 				}
 			},
 			{
-				"name": "aqs_cliente",
+				"name": "aqs_cliente1",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "aqs_canton",
+						"activity": "aqs_canton1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -36,11 +36,11 @@
 				}
 			},
 			{
-				"name": "PaymTermInvoiceStaging",
+				"name": "PaymTermInvoiceStaging1",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "LogisticsAddressCountryRegionStaging",
+						"activity": "LogisticsAddressCountryRegionStaging1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -56,11 +56,11 @@
 				}
 			},
 			{
-				"name": "aqs_canton",
+				"name": "aqs_canton1",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "UFTProjInvoiceJourStaging",
+						"activity": "UFTProjInvoiceJourStaging1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -76,11 +76,11 @@
 				}
 			},
 			{
-				"name": "UFTProjInvoiceJourStaging",
+				"name": "UFTProjInvoiceJourStaging1",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "PaymTermInvoiceStaging",
+						"activity": "PaymTermInvoiceStaging1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
