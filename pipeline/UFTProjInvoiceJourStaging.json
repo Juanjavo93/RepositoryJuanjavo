@@ -119,6 +119,10 @@
 		"parameters": {
 			"schema": {
 				"type": "string",
+				"defaultValue": "dbo"
+			},
+			"schema2": {
+				"type": "string",
 				"defaultValue": "dbt"
 			}
 		},
