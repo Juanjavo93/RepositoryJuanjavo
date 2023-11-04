@@ -56,7 +56,7 @@
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Execute Pipeline1_copy2_copy1_copy1",
+						"activity": "UFTProjInvoiceJourStaging",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -68,7 +68,7 @@
 				}
 			},
 			{
-				"name": "Execute Pipeline1_copy2_copy1_copy1",
+				"name": "UFTProjInvoiceJourStaging",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
@@ -80,6 +80,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "UFTProjInvoiceJourStaging",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			}
