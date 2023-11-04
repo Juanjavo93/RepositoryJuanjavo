@@ -1,5 +1,5 @@
 {
-	"name": "pipeline3",
+	"name": "Crear_Tabla_Excel",
 	"properties": {
 		"activities": [
 			{
@@ -89,6 +89,14 @@
 				]
 			}
 		],
+		"variables": {
+			"tabla": {
+				"type": "Array",
+				"defaultValue": [
+					"LogisticsAddressCountryRegionStaging"
+				]
+			}
+		},
 		"annotations": []
 	}
 }
