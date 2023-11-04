@@ -126,7 +126,7 @@
 			"tabla": {
 				"type": "Array",
 				"defaultValue": [
-					"['UFTProjInvoiceJourStaging']"
+					"UFTProjInvoiceJourStaging"
 				]
 			}
 		},
