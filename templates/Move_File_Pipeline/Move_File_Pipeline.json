@@ -1,0 +1,8 @@
+{
+	"name": "default",
+	"__zone_symbol__state": true,
+	"__zone_symbol__value": {
+		"name": "default",
+		"type": "Microsoft.DataFactory/factories/managedvirtualnetworks"
+	}
+}
